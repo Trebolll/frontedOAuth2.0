@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="/js/oauth2.js"></script>
+
+    <!--
+    Сокращенная запись <script src="oauth2.js"/> подключения файлов/скриптов может не работать во многих браузерах, поэтому всегда используем закрывающий тег
+    -->
+
+
+</head>
+<body>
+
+
+<!--
+HTML компоненты на странице - нужны для хранения состояния значений - чтобы сравнивать с параметрами, которые приходят от auth server
+В реальном приложении - можно хранить значения в глобальных переменных
+-->
+<input type="hidden" readonly id="originalState"/>
+<input type="hidden" readonly id="codeVerifier"/>
+
+
+<script>
+
+    initValues();
+
+</script>
+
+</body>
+</html>
