@@ -10,29 +10,22 @@
     Сокращенная запись <script src="oauth2.js"/> подключения файлов/скриптов может не работать во многих браузерах, поэтому всегда используем закрывающий тег
     -->
 
-
 </head>
 <body>
 
 
-<!--
-HTML компоненты на странице - нужны для хранения состояния значений - чтобы сравнивать с параметрами, которые приходят от auth server
-В реальном приложении - можно хранить значения в глобальных переменных
--->
-<input type="hidden" readonly id="originalState"/>
-<input type="hidden" readonly id="codeVerifier"/>
 
-<button onclick="getDataFromResourceServer()">RS data</button>
-
-<!-- отображение данных из resrouce server (когда пользователь авторизуется) -->
+<!-- страница отображает данные из resource server API (только после того, как пользователь авторизуется и получит access token) -->
 <div id="userdata"></div>
 
+<!-- выйти из системы -->
+<button onclick="logout()" id="logout">logout</button>
 
 <script>
-
-    initValues();
-
+    initPage();
 </script>
+
+
 
 </body>
 </html>

@@ -26,17 +26,5 @@ public class RedirectController {
         return "index"; // открываем нужную страницу (HTML или JSP из папки resources/templates)
     }
 
-    // если пользователь успешно авторизовался - сюда AuthServer отправит ответ с параметрами и auth code
-    @GetMapping("/redirect") // тип метода (GET) обязательно должен быть таким же, как и отправляет AuthServer
-    public String redirect() {
-        return "redirect"; // открываем нужную страницу (HTML или JSP из папки resources/templates)
-    }
-
-    // обработка результата запроса от Resource Server (с полученным ранее access token)
-    // т.е. уже сами бизнес-данные приложения
-    @PostMapping("/result") // обязательно POST, потому что ответ от auth server именно в POST
-    public String result() {
-        return "index";  // открываем нужную страницу (HTML или JSP из папки resources/templates)
-    }
 
 }
